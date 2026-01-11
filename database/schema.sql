@@ -1,0 +1,20 @@
+-- Use database
+USE fin_accounts;
+
+-- Income table
+CREATE TABLE IF NOT EXISTS income (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(100) NOT NULL,
+  amount DECIMAL(10,2) NOT NULL,
+  date DATE NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Expense table
+CREATE TABLE IF NOT EXISTS expense (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(100) NOT NULL,
+  amount DECIMAL(10,2) NOT NULL,
+  date DATE NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
